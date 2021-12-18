@@ -1,27 +1,21 @@
-let amountOfGrids = 16;
 const gridContainer = document.querySelector(".container");
 
-const mouseOverColor = () => {
-  gridContainer.addEventListener("mouseover", () => {
-    console.log("Mouse in");
-  });
-  gridContainer.addEventListener("mouseout", () => {
-    console.log("Mouse out");
-  });
-};
-const generateGrids = () => {
-  for (let i = 0; i < amountOfGrids; i++) {
-    createGrids();
+const makeRows = (rows, cols) => {
+  gridContainer.style.setProperty("--grid-rows", rows);
+  gridContainer.style.setProperty("--grid-cols", cols);
+  for (c = 0; c < rows * cols; c++) {
+    let cell = document.createElement("div");
+    gridContainer.appendChild(cell).className = "grid-item";
   }
 };
 
-const createGrids = () => {
-  const createGrids = document.createElement("div");
-  createGrids.style.backgroundColor = "black";
-  createGrids.style.paddingTop = "100%";
-  createGrids.style.content = "Hello";
-  gridContainer.appendChild(createGrids);
-};
+makeRows(16, 16);
 
-generateGrids();
-mouseOverColor();
+// const mouseOverColor = () => {
+//   gridContainer.addEventListener("mouseover", () => {
+//     console.log("Mouse in");
+//   });
+//   gridContainer.addEventListener("mouseout", () => {
+//     console.log("Mouse out");
+//   });
+// };

@@ -1,20 +1,31 @@
-@media (min-width: 350px) {
-  * {
-    padding: 0;
-    margin: 0;
-    font-family: "Roboto", sans-serif;
-  }
+:root {
+  --grid-cols: 1;
+  --grid-rows: 1;
+}
 
-  .title {
-    font-size: 2rem;
-    background-color: black;
-    color: white;
-    text-align: center;
-  }
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
 
-  .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    width: 100%;
-  }
+.title {
+  font-size: 2.5rem;
+  background-color: #002171;
+  color: white;
+  text-align: center;
+}
+
+.container {
+  display: grid;
+  grid-gap: 0.2em;
+  grid-template-rows: repeat(var(--grid-rows), 1fr);
+  grid-template-columns: repeat(var(--grid-cols), 1fr);
+}
+
+.grid-item {
+  padding: 1em;
+  border: 1px solid rgb(10, 0, 0);
+  text-align: center;
 }
