@@ -1,6 +1,9 @@
 :root {
   --grid-cols: 1;
   --grid-rows: 1;
+  --title-bg-color: #5900ff;
+  --grid-item-color: rgb(0, 0, 0);
+  --main-bg-color: #e0f2ff;
 }
 
 * {
@@ -10,22 +13,27 @@
   box-sizing: border-box;
 }
 
-.title {
-  font-size: 2.5rem;
-  background-color: #002171;
-  color: white;
-  text-align: center;
-}
+@media (min-width: 400px) {
+  .title {
+    font-size: 1.5rem;
+    padding: 0.75em;
+    text-align: center;
+    background-color: var(--title-bg-color);
+    color: #ffffff;
+  }
 
-.container {
-  display: grid;
-  grid-gap: 0.2em;
-  grid-template-rows: repeat(var(--grid-rows), 1fr);
-  grid-template-columns: repeat(var(--grid-cols), 1fr);
-}
+  .container {
+    display: grid;
+    min-height: 75vh;
+    padding: 2em;
+    background-color: var(--main-bg-color);
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+    grid-template-columns: repeat(var(--grid-cols), 1fr);
+  }
 
-.grid-item {
-  padding: 1em;
-  border: 1px solid rgb(10, 0, 0);
-  text-align: center;
+  .grid-item {
+    border: 1px solid rgb(0, 0, 0);
+    max-width: 960px;
+    min-height: 3vh;
+  }
 }

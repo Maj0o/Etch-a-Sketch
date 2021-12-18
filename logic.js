@@ -10,12 +10,3 @@ const makeRows = (rows, cols) => {
 };
 
 makeRows(16, 16);
-
-// const mouseOverColor = () => {
-//   gridContainer.addEventListener("mouseover", () => {
-//     console.log("Mouse in");
-//   });
-//   gridContainer.addEventListener("mouseout", () => {
-//     console.log("Mouse out");
-//   });
-// };
