@@ -1,16 +1,27 @@
-amountOfGrids = 16;
+let amountOfGrids = 16;
+const gridContainer = document.querySelector(".container");
 
+const mouseOverColor = () => {
+  gridContainer.addEventListener("mouseover", () => {
+    console.log("Mouse in");
+  });
+  gridContainer.addEventListener("mouseout", () => {
+    console.log("Mouse out");
+  });
+};
 const generateGrids = () => {
-  const gridContainer = document.querySelector(".container");
-
   for (let i = 0; i < amountOfGrids; i++) {
-    const createGrids = document.createElement("div");
-
-    createGrids.style.backgroundColor = "red";
-    createGrids.style.textAlign = "center";
-    createGrids.textContent = "Hello I'm a test";
-    gridContainer.appendChild(createGrids);
+    createGrids();
   }
 };
 
+const createGrids = () => {
+  const createGrids = document.createElement("div");
+  createGrids.style.backgroundColor = "black";
+  createGrids.style.paddingTop = "100%";
+  createGrids.style.content = "Hello";
+  gridContainer.appendChild(createGrids);
+};
+
 generateGrids();
+mouseOverColor();

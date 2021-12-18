@@ -2,10 +2,19 @@
   * {
     padding: 0;
     margin: 0;
+    font-family: "Roboto", sans-serif;
+  }
+
+  .title {
+    font-size: 2rem;
+    background-color: black;
+    color: white;
+    text-align: center;
   }
 
   .container {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 100%;
   }
 }
