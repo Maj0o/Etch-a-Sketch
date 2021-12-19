@@ -1,10 +1,10 @@
 :root {
   --grid-cols: 1;
   --grid-rows: 1;
-  --title-bg-color: #9c0000;
-  --grid-item-color: rgb(0, 0, 0);
-  --main-bg-color: #e0f2ff;
-  --border-color: #ff5131;
+  --title-bg-color: #e0ed32;
+  --grid-line-color: #000000;
+  --grid-container-background-color: #dbdbdb;
+  --border-color: #c40e02;
 }
 
 * {
@@ -17,7 +17,7 @@
 @media (min-width: 375px) {
   .title {
     text-align: center;
-    color: white;
+    color: var(--title-bg-color);
     font-size: 2.5rem;
     line-height: 3rem;
     background-color: var(--border-color);
@@ -26,15 +26,51 @@
   .container {
     display: grid;
     border-top: 10px solid var(--border-color);
-    border-right: 20px solid var(--border-color);
-    border-left: 20px solid var(--border-color);
-    background-color: var(--main-bg-color);
+    border-right: 30px solid var(--border-color);
+    border-left: 30px solid var(--border-color);
+    background-color: var(--grid-container-background-color);
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     grid-template-columns: repeat(var(--grid-cols), 1fr);
     aspect-ratio: 1/1;
   }
 
   .grid-item {
-    border: 1px solid rgb(0, 0, 0);
+    border: 1px solid var(--grid-line-color);
+  }
+
+  .controls {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--border-color);
+    padding: 1.25em;
+  }
+
+  .reset {
+    background-color: var(--grid-container-background-color);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+  }
+
+  .colorpicker {
+    background-color: var(--grid-container-background-color);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+  }
+
+  .button {
+    color: white;
+    padding: 0.75em;
+    border-radius: 1em;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.25rem;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+
+  .button:hover {
+    background-color: var(--grid-line-color);
   }
 }

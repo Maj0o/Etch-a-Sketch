@@ -1,4 +1,5 @@
 const gridContainer = document.querySelector(".container");
+const eraseButton = document.querySelector(".button");
 
 let makeRows = (rows, cols) => {
   gridContainer.style.setProperty("--grid-rows", rows);
@@ -9,13 +10,14 @@ let makeRows = (rows, cols) => {
   }
 };
 
-let eventFunction = (e) => {
+let mouseOverEvent = (e) => {
   gridContainer.addEventListener("mouseover", (e) => {
     if (e.target !== e.currentTarget) {
       e.target.style.backgroundColor = "red";
-    } else e.stopPropagation;
+    }
+    e.stopPropagation;
   });
 };
 
 makeRows(16, 16);
-eventFunction();
+mouseOverEvent();
