@@ -1,9 +1,10 @@
 :root {
   --grid-cols: 1;
   --grid-rows: 1;
-  --title-bg-color: #5900ff;
+  --title-bg-color: #9c0000;
   --grid-item-color: rgb(0, 0, 0);
   --main-bg-color: #e0f2ff;
+  --border-color: #ff5131;
 }
 
 * {
@@ -13,27 +14,28 @@
   box-sizing: border-box;
 }
 
-@media (min-width: 400px) {
+@media (min-width: 375px) {
   .title {
-    font-size: 1.5rem;
-    padding: 0.75em;
     text-align: center;
-    background-color: var(--title-bg-color);
-    color: #ffffff;
+    color: white;
+    font-size: 1.5rem;
+    background-color: var(--border-color);
   }
 
   .container {
     display: grid;
+    border-top: 10px solid var(--border-color);
+    border-bottom: 50px solid var(--border-color);
+    border-right: 30px solid var(--border-color);
+    border-left: 30px solid var(--border-color);
+    border-radius: 0.2em;
     min-height: 75vh;
-    padding: 2em;
     background-color: var(--main-bg-color);
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     grid-template-columns: repeat(var(--grid-cols), 1fr);
   }
 
   .grid-item {
-    border: 1px solid rgb(0, 0, 0);
-    max-width: 960px;
-    min-height: 3vh;
+    border: 2px solid rgb(0, 0, 0);
   }
 }

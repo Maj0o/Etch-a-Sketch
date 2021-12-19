@@ -1,6 +1,6 @@
 const gridContainer = document.querySelector(".container");
 
-const makeRows = (rows, cols) => {
+let makeRows = (rows, cols) => {
   gridContainer.style.setProperty("--grid-rows", rows);
   gridContainer.style.setProperty("--grid-cols", cols);
   for (c = 0; c < rows * cols; c++) {
@@ -9,4 +9,13 @@ const makeRows = (rows, cols) => {
   }
 };
 
+let eventFunction = (e) => {
+  gridContainer.addEventListener("mouseover", (e) => {
+    if (e.target !== e.currentTarget) {
+      e.target.style.backgroundColor = "red";
+    } else console.log("parent clicked");
+  });
+};
+
 makeRows(16, 16);
+eventFunction();
