@@ -13,7 +13,7 @@ let eventFunction = (e) => {
   gridContainer.addEventListener("mouseover", (e) => {
     if (e.target !== e.currentTarget) {
       e.target.style.backgroundColor = "red";
-    } else console.log("parent clicked");
+    } else e.stopPropagation;
   });
 };
 
