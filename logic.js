@@ -55,10 +55,28 @@ let RGBGenerator = () => {
   return code;
 };
 
-let colorPicker = () => {
-  const colorPickButton = document.querySelector("#colorpicker");
-  colorPickButton.addEventListener("click", () => {
-    alert("hello");
+let gridSize = (rows, cols) => {
+  const changeGridButton = document.querySelector(".gridsize");
+  changeGridButton.addEventListener("click", () => {
+    rows = prompt("Amount of rows:");
+    cols = prompt("Amount of columns:");
+    if (rows > 20 || cols > 20) {
+      alert("Pick a lower number, due to performence the maximum is 20");
+      window.location.reload();
+      rows = prompt("Amount of rows:");
+      cols = prompt("Amount of columns:");
+    } else makeRows(rows, cols);
+    for (c = 0; c < rows * cols; c++) {
+      let cell = document.createElement("div");
+      gridContainer.appendChild(cell).className = "grid-item";
+    }
+  });
+};
+
+let reloadGrid = () => {
+  const resetButton = document.querySelector(".resetgrid");
+  resetButton.addEventListener("click", () => {
+    location.reload();
   });
 };
 
@@ -66,4 +84,5 @@ makeRows(16, 16);
 mouseOverEvent();
 eraseFunc();
 rainbowFunc();
-
+gridSize();
+reloadGrid();

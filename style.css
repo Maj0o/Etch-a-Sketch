@@ -14,7 +14,74 @@
   box-sizing: border-box;
 }
 
-@media (min-width: 375px) {
+@media (min-width: 481px) {
+  .title {
+    text-align: center;
+    color: var(--title-bg-color);
+    font-size: 3.5rem;
+    padding-top: 0.5em;
+    line-height: 1rem;
+    background-color: var(--border-color);
+  }
+
+  .container {
+    display: grid;
+    border-top: 30px solid var(--border-color);
+    border-right: 50px solid var(--border-color);
+    border-left: 50px solid var(--border-color);
+    background-color: var(--grid-container-background-color);
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+    grid-template-columns: repeat(var(--grid-cols), 1fr);
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .controls {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--border-color);
+    padding: 2em;
+    gap: 1em;
+  }
+
+  .gridsize,
+  .resetgrid {
+    background-color: var(--grid-container-background-color);
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+  }
+
+  .rainbow-mode-button,
+  .erase-button {
+    color: var(--title-bg-color);
+    border-radius: 1em;
+    padding: 1em;
+    text-align: center;
+    text-decoration: none;
+    font-size: 3.5rem;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+
+  .erase-button:hover {
+    background-color: var(--grid-line-color);
+  }
+
+  .rainbow-mode-button:hover {
+    background-color: var(--grid-line-color);
+  }
+
+  footer {
+    text-align: center;
+    color: var(--title-bg-color);
+    background-color: var(--border-color);
+    padding: 2.5em;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 480px) {
   .title {
     text-align: center;
     color: var(--title-bg-color);
@@ -31,7 +98,8 @@
     background-color: var(--grid-container-background-color);
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     grid-template-columns: repeat(var(--grid-cols), 1fr);
-    aspect-ratio: 1/1;
+    min-height: 60vh;
+    min-width: 60vw;
   }
 
   .controls {
@@ -43,22 +111,22 @@
     gap: 1em;
   }
 
-  .resetgrid,
-  .colorpicker {
+  .gridsize,
+  .resetgrid {
     background-color: var(--grid-container-background-color);
+    border-radius: 50%;
     height: 50px;
     width: 50px;
-    border-radius: 50%;
   }
 
   .rainbow-mode-button,
   .erase-button {
     color: var(--title-bg-color);
-    padding: 0.25em;
     border-radius: 1em;
+    padding: 0.1em;
     text-align: center;
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 2rem;
     transition-duration: 0.4s;
     cursor: pointer;
   }
@@ -69,5 +137,12 @@
 
   .rainbow-mode-button:hover {
     background-color: var(--grid-line-color);
+  }
+
+  footer {
+    text-align: center;
+    color: var(--title-bg-color);
+    background-color: var(--border-color);
+    padding: 2.5em;
   }
 }
