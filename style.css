@@ -3,7 +3,7 @@
   --grid-rows: 1;
   --title-bg-color: #e0ed32;
   --grid-line-color: #000000;
-  --grid-container-background-color: #dbdbdba9;
+  --grid-container-background-color: hsl(0, 0%, 85%);
   --border-color: #c40e02;
 }
 
@@ -34,18 +34,16 @@
     aspect-ratio: 1/1;
   }
 
-  .grid-item {
-    border: 1px solid var(--grid-line-color);
-  }
-
   .controls {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: var(--border-color);
     padding: 1.25em;
   }
 
-  .circle {
+  .resetgrid,
+  .colorpicker {
     background-color: var(--grid-container-background-color);
     height: 50px;
     width: 50px;
