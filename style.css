@@ -32,8 +32,7 @@
     background-color: var(--grid-container-background-color);
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     grid-template-columns: repeat(var(--grid-cols), 1fr);
-    width: 100vw;
-    height: 100vh;
+    height: 80vh;
   }
 
   .controls {
@@ -49,8 +48,8 @@
   .resetgrid {
     background-color: var(--grid-container-background-color);
     border-radius: 50%;
-    height: 120px;
-    width: 120px;
+    height: 100px;
+    width: 100px;
   }
 
   .rainbow-mode-button,
@@ -78,6 +77,7 @@
     color: var(--title-bg-color);
     background-color: var(--border-color);
     padding: 2.5em;
+    font-size: 2rem;
   }
 }
 
