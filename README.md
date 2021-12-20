@@ -7,3 +7,5 @@ This is my attempt of trying to recreate the age old classic etch-a-sketch for T
 - Working with global variables in css
 - Setting properties to global properties
 - Making sites responsive
+
+You can try it here: https://maj0o.github.io/Etch-a-Sketch/
