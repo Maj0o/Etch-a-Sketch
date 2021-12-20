@@ -25,9 +25,9 @@
 
   .container {
     display: grid;
-    border-top: 10px solid var(--border-color);
-    border-right: 30px solid var(--border-color);
-    border-left: 30px solid var(--border-color);
+    border-top: 30px solid var(--border-color);
+    border-right: 50px solid var(--border-color);
+    border-left: 50px solid var(--border-color);
     background-color: var(--grid-container-background-color);
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     grid-template-columns: repeat(var(--grid-cols), 1fr);
@@ -36,10 +36,11 @@
 
   .controls {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     background-color: var(--border-color);
-    padding: 1.25em;
+    padding: 2em;
+    gap: 1em;
   }
 
   .resetgrid,
@@ -53,11 +54,11 @@
   .rainbow-mode-button,
   .erase-button {
     color: var(--title-bg-color);
-    padding: 0.75em;
+    padding: 0.25em;
     border-radius: 1em;
     text-align: center;
     text-decoration: none;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     transition-duration: 0.4s;
     cursor: pointer;
   }
