@@ -11,6 +11,7 @@ let makeRows = (rows, cols) => {
     gridContainer.appendChild(cell).className = "grid-item";
   }
 };
+
 gridContainer.addEventListener("mouseover", (e) => {
   if (e.target !== e.currentTarget) {
     e.target.style.backgroundColor = "red";
