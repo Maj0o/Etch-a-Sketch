@@ -1,7 +1,4 @@
 const gridContainer = document.querySelector(".container");
-const eraseButton = document.querySelector(".erase-button");
-const rainbowButton = document.querySelector(".rainbow-mode-button");
-const resetButton = document.querySelector(".resetgrid");
 
 let makeRows = (rows, cols) => {
   gridContainer.style.setProperty("--grid-rows", rows);
@@ -12,32 +9,42 @@ let makeRows = (rows, cols) => {
   }
 };
 
-gridContainer.addEventListener("mouseover", (e) => {
-  if (e.target !== e.currentTarget) {
-    e.target.style.backgroundColor = "red";
-  }
-  e.stopPropagation();
-});
-
-eraseButton.addEventListener("click", () => {
-  eraseColor();
-});
-
-gridContainer.addEventListener("mouseover", (e) => {
-  if (e.target !== e.currentTarget) {
-    e.target.style.backgroundColor = "hsl(0, 0%, 85%)";
-  }
-  e.stopPropagation();
-});
-
-rainbowButton.addEventListener("click", () => {
+let mouseOverEvent = (e) => {
   gridContainer.addEventListener("mouseover", (e) => {
     if (e.target !== e.currentTarget) {
-      e.target.style.backgroundColor = RGBGenerator();
+      e.target.style.backgroundColor = "red";
     }
     e.stopPropagation();
   });
-});
+};
+
+let eraseFunc = () => {
+  const eraseButton = document.querySelector(".erase-button");
+  eraseButton.addEventListener("click", () => {
+    eraseColor();
+  });
+};
+
+let eraseColor = () => {
+  gridContainer.addEventListener("mouseover", (e) => {
+    if (e.target !== e.currentTarget) {
+      e.target.style.backgroundColor = "hsl(0, 0%, 85%)";
+    }
+    e.stopPropagation();
+  });
+};
+
+let rainbowFunc = () => {
+  const rainbowButton = document.querySelector(".rainbow-mode-button");
+  rainbowButton.addEventListener("click", () => {
+    gridContainer.addEventListener("mouseover", (e) => {
+      if (e.target !== e.currentTarget) {
+        e.target.style.backgroundColor = RGBGenerator();
+      }
+      e.stopPropagation();
+    });
+  });
+};
 
 let RGBGenerator = () => {
   let makeColorCode = "0123456789ABCDEF";
@@ -66,12 +73,16 @@ let gridSize = (rows, cols) => {
   });
 };
 
-resetButton.addEventListener("click", () => {
-  location.reload();
-});
+let reloadGrid = () => {
+  const resetButton = document.querySelector(".resetgrid");
+  resetButton.addEventListener("click", () => {
+    location.reload();
+  });
+};
 
 makeRows(16, 16);
 mouseOverEvent();
 eraseFunc();
 rainbowFunc();
 gridSize();
+reloadGrid();
