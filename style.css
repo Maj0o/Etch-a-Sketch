@@ -14,7 +14,7 @@
   box-sizing: border-box;
 }
 
-@media (min-width: 521px) {
+@media (min-width: 481px) {
   .title {
     text-align: center;
     color: var(--title-bg-color);
@@ -79,7 +79,7 @@
   }
 }
 
-@media (min-width: 350px) and (max-width: 520px) {
+@media (min-width: 350px) and (max-width: 480px) {
   .title {
     text-align: center;
     color: var(--title-bg-color);
