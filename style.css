@@ -3,14 +3,14 @@
   --grid-rows: 1;
   --title-bg-color: #e0ed32;
   --grid-line-color: #000000;
-  --grid-container-background-color: hsl(0, 0%, 85%);
+  --grid-container-background-color: hsl(0, 0%, 100%);
   --border-color: #c40e02;
 }
 
 * {
   padding: 0;
   margin: 0;
-  font-family: "Ole", cursive;
+  font-family: "Roboto", sans-serif;
   box-sizing: border-box;
 }
 
@@ -19,7 +19,7 @@
     text-align: center;
     color: var(--title-bg-color);
     font-size: 2.5rem;
-    line-height: 3rem;
+    padding: 1em;
     background-color: var(--border-color);
   }
 

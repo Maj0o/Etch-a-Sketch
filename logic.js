@@ -14,7 +14,7 @@ let makeRows = (rows, cols) => {
 
 gridContainer.addEventListener("mouseover", (e) => {
   if (e.target !== e.currentTarget) {
-    e.target.style.backgroundColor = "red";
+    e.target.style.backgroundColor = "black";
   }
   e.stopPropagation();
 });
@@ -22,7 +22,7 @@ gridContainer.addEventListener("mouseover", (e) => {
 eraseButton.addEventListener("click", () => {
   gridContainer.addEventListener("mouseover", (e) => {
     if (e.target !== e.currentTarget) {
-      e.target.style.backgroundColor = "hsl(0, 0%, 85%)";
+      e.target.style.backgroundColor = "white";
     }
     e.stopPropagation();
   });
