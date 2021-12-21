@@ -14,7 +14,7 @@ let makeRows = (rows, cols) => {
 
 gridContainer.addEventListener("mouseover", (e) => {
   if (e.target !== e.currentTarget) {
-    e.target.style.backgroundColor = "black";
+    e.target.style.backgroundColor = "red";
   }
   e.stopPropagation();
 });
