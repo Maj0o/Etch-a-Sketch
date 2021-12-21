@@ -51,7 +51,7 @@ let gridSize = (rows, cols) => {
   changeGridButton.addEventListener("click", () => {
     rows = prompt("Amount of rows:");
     cols = prompt("Amount of columns:");
-    if (rows > 20 || cols > 20) {
+    if (rows > 100 || cols > 100) {
       alert("Pick a lower number, due to performence the maximum is 20");
       window.location.reload();
       rows = prompt("Amount of rows:");
